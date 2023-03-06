@@ -9,8 +9,8 @@ namespace Krypto1
         static int iterations = 10000;
         static void Main(string[] args)
         {
-            //StartTests();
-            CypherUp();
+            StartTests();
+            //CypherUp();
             Console.WriteLine("Done");
             Console.ReadKey();
         }
@@ -71,7 +71,7 @@ namespace Krypto1
         {
             List<int> returnList = new List<int>();
 
-            using (RNGCryptoServiceProvider provider = new RNGCryptoServiceProvider())
+            using (RandomNumberGenerator provider = RandomNumberGenerator.Create())
             {
                 byte[] number = new byte[4];
 
